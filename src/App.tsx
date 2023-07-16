@@ -1,13 +1,16 @@
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { AppRouter } from './router'
+// import { AppRouter } from './router'
 
-
-function App() {
+const App: React.FC = () => {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='p-8'>
-          Evey
-      </div>
+      <Router>
+        <AppRouter />
+      </Router>
     </>
   )
 }
