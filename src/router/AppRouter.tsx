@@ -1,17 +1,32 @@
 import { Route, Routes } from 'react-router-dom'
 import {  routes  } from './routes'
+import { ProtectedRoute } from './ProtectedRoute'
 
-export const AppRouter = () => {
+type AppRouterProps = {
+    props?: any
+};
+
+export const AppRouter = (props: AppRouterProps) => {
     return (
         <>
             <Routes>
-                {routes?.map((route) => (
-                    <Route 
-                        key={route.name}
-                        path={route.path}
-                        element={<route.element />}
-                    />
-                ))}
+                {routes?.map((route) => {
+                    return route.restricted ? (
+                        <Route key={route.name} path={route.path} element={<ProtectedRoute {...props}/>}>
+                            <Route 
+                                key={route.name}
+                                path={route.path}
+                                element={<route.element />}
+                            />
+                        </Route>
+                    ) : (
+                        <Route 
+                            key={route.name}
+                            path={route.path}
+                            element={<route.element />}
+                        />
+                    )
+                })}
             </Routes>
         </>
     )

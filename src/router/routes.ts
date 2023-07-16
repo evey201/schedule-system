@@ -7,7 +7,7 @@ import {
 type Routes = {
     name: string;
     path: string;
-    hasAccess: boolean;
+    restricted: boolean;
     element: React.FC<unknown>;
     roles: string[]
 }
@@ -16,14 +16,14 @@ export const routes: Routes[] = [
     {
         name: 'Home',
         path: '/',
-        hasAccess: false,
+        restricted: true,
         roles: [],
         element: Dashboard,
     },
     {
         name: 'Login',
         path: '/login',
-        hasAccess: false,
+        restricted: false,
         roles: [],
         element: Login,
     }

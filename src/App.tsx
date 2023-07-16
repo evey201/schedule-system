@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { AppRouter } from './router'
-// import { AppRouter } from './router'
+import { Providers } from './context/providers'
 
 const App: React.FC = () => {
   // const [count, setCount] = useState(0)
@@ -9,7 +9,9 @@ const App: React.FC = () => {
   return (
     <>
       <Router>
-        <AppRouter />
+        <Providers>
+          <AppRouter />
+        </Providers>
       </Router>
     </>
   )
