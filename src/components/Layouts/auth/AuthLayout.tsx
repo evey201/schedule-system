@@ -22,7 +22,7 @@ export const AuthLayout = ({ image, title, children }: AuthLayoutProps) => {
                 <LeftScreenOverlay>
                     <TopWrapper>
                         <TitleWrapper>
-                            <Title>{title}</Title>
+                            <Title className='tracking-widest'>{title}</Title>
                         </TitleWrapper>
                     </TopWrapper>
                     <ImageContainer>

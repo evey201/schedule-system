@@ -4,8 +4,9 @@ import {
     ReactNode,
     Dispatch,
     useMemo,
+    useCallback,
 } from 'react'
-
+import logger from 'use-reducer-logger'
 import {
     AuthReducer,
     AUTH_START,
@@ -41,9 +42,14 @@ type AuthProviderProps = {
 };
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-    const [state, dispatch] = useReducer( AuthReducer,
+    const [state, dispatch] = useReducer( process.env.NODE_ENV === 'development'
+    ? logger(AuthReducer) : AuthReducer,
         initialState
     )
+
+    // const login = useCallback(async (values) => {
+    //     dispatch({ type: AUTH_START })
+    // }, [])
     
 
     const contextValue = useMemo(() => ({
