@@ -1,17 +1,12 @@
-export const AUTH_START = 'AUTH_START'
-export const LOGIN_FAIL = 'LOGIN_FAIL'
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-export const LOGOUT_START = 'LOGOUT_START'
-export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'
-export const LOGOUT_FAIL = 'LOGOUT_FAIL'
 
-const enum REDUCER_ACTION_TYPE {
-    AUTH_START,
-    LOGIN_FAIL,
-    LOGIN_SUCCESS,
-    LOGOUT_START,
-    LOGOUT_SUCCESS,
-    LOGOUT_FAIL
+
+enum REDUCER_ACTION_TYPES {
+    AUTH_START = 'AUTH_START',
+    LOGIN_FAIL = 'LOGIN_FAIL',
+    LOGIN_SUCCESS = 'LOGIN_SUCCESS',
+    LOGOUT_START = 'LOGOUT_START',
+    LOGOUT_SUCCESS = 'LOGOUT_SUCCESS',
+    LOGOUT_FAIL = 'LOGOUT_FAIL'
 }
 
 type StateType = {
@@ -23,7 +18,7 @@ type StateType = {
 }
 
 type ReducerAction = {
-    type: REDUCER_ACTION_TYPE,
+    type: REDUCER_ACTION_TYPES,
     payload?: unknown
 }
 
@@ -31,12 +26,12 @@ type ReducerAction = {
 
 export const AuthReducer = (state: StateType, action: ReducerAction) => {
     switch(action.type) {
-        case REDUCER_ACTION_TYPE.AUTH_START:
+        case REDUCER_ACTION_TYPES.AUTH_START:
             return {
                 ...state,
                 loading: true
             }
-        case REDUCER_ACTION_TYPE.LOGIN_FAIL:
+        case REDUCER_ACTION_TYPES.LOGIN_FAIL:
             return {
                 ...state,
                 loading: false,
@@ -44,7 +39,7 @@ export const AuthReducer = (state: StateType, action: ReducerAction) => {
                 error: action.payload,
                 authenticated: false,
             }
-        case REDUCER_ACTION_TYPE.LOGIN_SUCCESS:
+        case REDUCER_ACTION_TYPES.LOGIN_SUCCESS:
             return {
                 ...state,
                 loading: false,
@@ -52,7 +47,7 @@ export const AuthReducer = (state: StateType, action: ReducerAction) => {
                 error: null,
                 authenticated: true,
             }
-        case REDUCER_ACTION_TYPE.LOGOUT_SUCCESS:
+        case REDUCER_ACTION_TYPES.LOGOUT_SUCCESS:
             return {
                 ...state,
                 loading: false,
@@ -60,7 +55,7 @@ export const AuthReducer = (state: StateType, action: ReducerAction) => {
                 error: null,
                 authenticated: true,
             }
-        case REDUCER_ACTION_TYPE.LOGOUT_FAIL:
+        case REDUCER_ACTION_TYPES.LOGOUT_FAIL:
             return {
                 ...state,
                 loading: false,

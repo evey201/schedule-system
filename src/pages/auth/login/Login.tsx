@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client"
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import { AuthLayout, FormInput } from '../../../components'
 import sideImage from '../../../assets/images/woman.svg'
 import {
@@ -14,6 +16,8 @@ import {
     SignupHereLink
 } from './Login.styled'
 import { isAuthorised } from '../../../services'
+import { useAuth } from '../../../hooks'
+import { NavigateFunction, useNavigate } from 'react-router-dom'
 
 interface UserCredentials {
     email: string;
@@ -22,24 +26,40 @@ interface UserCredentials {
 
 export const Login = () => {
     const [userCredentials, setUserCredentials] = useState<UserCredentials>({ email: '', password: '' });
+    const [isLoading, setLoading] = useState<boolean>(true)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    const navigate = useNavigate()
+    const {
+        login,
+        state: { loading, authenticated },
+    } = useAuth()
     const [error, setErrors] = useState<string>()
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value, name } = e.target
-        console.log({ value, name } )
+        // console.log({ value, name } )
         setUserCredentials({ ...userCredentials, [name]: value })
     }
     const handleSubmit =  (e: FormEvent<HTMLFormElement>): void=> {
         e.preventDefault()
+        // if email is not in the .env file, it will never get to the login dispatch
         const res =  isAuthorised(userCredentials.email)
         console.log(res)
         if (!res) {
             setErrors('Unauthorized User')
         }
         if (res) {
-            // login({ ...userCredentials })
-            // setErrors('')
+            login({ ...userCredentials })
+            setErrors('')
         }
     }
+
+    useEffect(() => {
+        setLoading(true)
+        if (authenticated) {
+            navigate('/')
+        }
+        setLoading(false)
+    }, [authenticated, navigate])
     return (
         <>
             <AuthLayout
