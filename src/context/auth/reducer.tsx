@@ -17,7 +17,7 @@ type StateType = {
     activeAccount?: unknown,
 }
 
-type ReducerAction = {
+export type ReducerAction = {
     type: REDUCER_ACTION_TYPES,
     payload?: unknown
 }

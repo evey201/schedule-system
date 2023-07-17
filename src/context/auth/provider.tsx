@@ -8,11 +8,12 @@ import {
     useMemo,
     useCallback,
     useState,
-    useEffect
+    useEffect,
 } from 'react'
 import logger from 'use-reducer-logger'
 import {
     AuthReducer,
+    ReducerAction
 } from './reducer'
 import { useNavigate } from 'react-router-dom'
 import { setAuthToken, getAuthToken } from '../../services'
@@ -43,7 +44,7 @@ const initialState: StateType = {
 
 type AuthContextType = {
     state: StateType;
-    dispatch: Dispatch<any>;
+    dispatch: Dispatch<ReducerAction>;
     login: ({ email, password }: { email: string; password: string }) => void;
 };
 
