@@ -1,4 +1,4 @@
-import MUIDataTable, { MUIDataTableColumnDef } from "mui-datatables";
+import MUIDataTable, { MUIDataTableColumnDef, MUIDataTableOptions, MUIDataTableProps } from "mui-datatables";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 type TableProps = {
@@ -10,7 +10,7 @@ type TableProps = {
 export const Table = ({
     columns = [],
     title,
-    data = []
+    data = [],
 }: TableProps) => {
 
     const theme = createTheme({
@@ -61,10 +61,14 @@ export const Table = ({
             // },
         },
     })
+    const options: Partial<MUIDataTableOptions> = {
+        responsive: 'standard',
+        selectableRowsHideCheckboxes: true,
+    }
     return (
         <div>
             <ThemeProvider theme={theme}>
-                <MUIDataTable columns={columns} title={title} data={data} />
+                <MUIDataTable columns={columns} title={title} data={data} options={options} />
             </ThemeProvider>
         </div>
     )

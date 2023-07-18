@@ -5,23 +5,27 @@ import {
 } from './Teams.styled'
 
 
-const dataArray: { email: string; firstname: string; lastname: string }[] = [
+const dataArray: { id: number, email: string; firstname: string; lastname: string }[] = [
     {
-      email: "evey@gmail.com",
-      firstname: "Evey",
-      lastname: "Alabi",
+        id: 1,  
+        email: "evey@gmail.com",
+        firstname: "Evey",
+        lastname: "Alabi",
     },
     {
+        id: 2,
         email: 'peter@gmail.com',
         firstname: 'Peter',
         lastname: 'Alabi',
     },
     {
+        id: 3,
         email: 'victor@gmail.com',
         firstname: 'Victor',
         lastname: 'Alabi',
     },
     {
+        id: 4,
         email: 'julian@gmail.com',
         firstname: 'Julian',
         lastname: 'Alabi',
@@ -34,12 +38,13 @@ export const Teams = withDashboard(() => {
     
     const columns = [
         {
-          name: "email",
-          label: "Email",
-          options: {
+            name: "id",
+            label: "id",
+            options: {
             filter: true,
             sort: true,
-          },
+            display: false
+            }
         },
         {
           name: "firstname",
@@ -56,6 +61,14 @@ export const Teams = withDashboard(() => {
             filter: true,
             sort: true,
           },
+        },
+        {
+            name: "email",
+            label: "Email",
+            options: {
+              filter: true,
+              sort: true,
+            },
         },
     ];
 
