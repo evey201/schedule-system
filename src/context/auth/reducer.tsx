@@ -51,9 +51,9 @@ export const AuthReducer = (state: StateType, action: ReducerAction) => {
             return {
                 ...state,
                 loading: false,
-                data: action.payload,
+                data: null,
                 error: null,
-                authenticated: true,
+                authenticated: false,
             }
         case REDUCER_ACTION_TYPES.LOGOUT_FAIL:
             return {

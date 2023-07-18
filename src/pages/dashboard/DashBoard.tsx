@@ -1,9 +1,11 @@
 "use client"
 
-export const Dashboard = () => {
+import { withDashboard } from "../../components"
+
+export const Dashboard = withDashboard(() => {
     return (
         <>
             Dashboard page
         </>
     )
-}
+})

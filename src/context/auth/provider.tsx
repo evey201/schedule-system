@@ -46,6 +46,7 @@ type AuthContextType = {
     state: StateType;
     dispatch: Dispatch<ReducerAction>;
     login: ({ email, password }: { email: string; password: string }) => void;
+    logout: () => void;
 };
 
 export const AuthContext = createContext<AuthContextType>({} as AuthContextType);
@@ -201,6 +202,21 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         [dispatch, navigate]
     );
     
+    const logout = useCallback((): void => {
+        dispatch({ type: REDUCER_ACTION_TYPES.AUTH_START });
+        try {
+          localStorage.clear()
+          dispatch({ type: REDUCER_ACTION_TYPES.LOGOUT_SUCCESS })
+          navigate('/login');
+        } catch (error) {
+          const errorMessage = error || 'Unable to Logout';
+          dispatch({
+            type: REDUCER_ACTION_TYPES.LOGOUT_FAIL,
+            payload: errorMessage,
+        })
+        }
+
+    }, [navigate])
 
 
     const getCurrentUser = useCallback(() => {
@@ -234,9 +250,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         state,
         dispatch,
         login,
-        // logout,
+        logout,
         getCurrentUser,
-    }), [state, login, getCurrentUser]);
+    }), [state, login, getCurrentUser, logout]);
     
 
     if (loadingApp) {

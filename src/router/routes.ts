@@ -8,7 +8,7 @@ type Routes = {
     name: string;
     path: string;
     restricted: boolean;
-    element: React.FC<unknown>;
+    element: React.FC;
     roles: string[]
 }
 
