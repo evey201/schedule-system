@@ -16,6 +16,8 @@ export const FormInput = ({
     value,
     disabled,
     placeholder,
+    required,
+    defaultValue
 }: FormInputProps) => {
     error = error ? error.toString() : ''
     return (
@@ -34,6 +36,8 @@ export const FormInput = ({
                 onChange={onChange}
                 autoComplete="off"
                 placeholder={placeholder}
+                required={required}
+                defaultValue={defaultValue}
             />
             {error && (
                 <Validation>

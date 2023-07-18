@@ -17,7 +17,7 @@ import {
 } from './Login.styled'
 import { isAuthorised } from '../../../services'
 import { useAuth } from '../../../hooks'
-import { NavigateFunction, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 interface UserCredentials {
     email: string;

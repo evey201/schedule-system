@@ -13,6 +13,8 @@ type InputProps = {
     value?: string,
     type?: React.HTMLInputTypeAttribute,
     onError?: React.ReactEventHandler<HTMLInputElement>
+    required?: boolean,
+    defaultValue?: string
 }
 
 
