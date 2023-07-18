@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { withDashboard, Table, Loading, FormInput, Modal } from "../../components"
 import {
     Divider
-} from './Teams.styled'
+} from './GameTables.styled'
 import { useModal } from "../../hooks";
 
 
@@ -33,7 +33,7 @@ const dataArray: { id: number, email: string; firstname: string; lastname: strin
     },
   ];
 
-export const Teams = withDashboard(() => {
+export const GameTables = withDashboard(() => {
     const [data, setData] = useState<{ email: string; firstname: string; lastname: string }[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const { showModal: modal, triggerModal: toggleModal } = useModal()

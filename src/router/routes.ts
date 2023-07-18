@@ -2,7 +2,8 @@ import React from 'react'
 import {
     Login,
     Dashboard,
-    Teams
+    Teams,
+    GameTables
 } from '../pages'
 
 type Routes = {
@@ -27,6 +28,13 @@ export const routes: Routes[] = [
         restricted: true,
         roles: ['manager'],
         element: Teams,
+    },
+    {
+        name: 'Game Tables',
+        path: '/game-tables',
+        restricted: true,
+        roles: ['manager'],
+        element: GameTables,
     },
     {
         name: 'Login',
