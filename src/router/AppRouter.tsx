@@ -12,7 +12,7 @@ export const AppRouter = (props: AppRouterProps) => {
             <Routes>
                 {routes?.map((route) => {
                     return route.restricted ? (
-                        <Route key={route.name} path={route.path} element={<ProtectedRoute {...props}/>}>
+                        <Route key={route.name} path={route.path} element={<ProtectedRoute role={route.roles} { ...props}/>}>
                             <Route 
                                 key={route.name}
                                 path={route.path}
