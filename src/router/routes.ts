@@ -1,7 +1,8 @@
 import React from 'react'
 import {
     Login,
-    Dashboard
+    Dashboard,
+    Teams
 } from '../pages'
 
 type Routes = {
@@ -19,6 +20,13 @@ export const routes: Routes[] = [
         restricted: true,
         roles: [],
         element: Dashboard,
+    },
+    {
+        name: 'Teams',
+        path: '/teams',
+        restricted: true,
+        roles: ['manager'],
+        element: Teams,
     },
     {
         name: 'Login',
