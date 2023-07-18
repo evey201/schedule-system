@@ -14,7 +14,7 @@ type InputProps = {
     type?: React.HTMLInputTypeAttribute,
     onError?: React.ReactEventHandler<HTMLInputElement>
     required?: boolean,
-    defaultValue?: string
+    defaultValue?: string | number;
 }
 
 
