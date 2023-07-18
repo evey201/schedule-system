@@ -1,0 +1,722 @@
+{
+    "gamePresenters": [
+      {
+        "id": 1,
+        "name": "Presenter 1"
+      },
+      {
+        "id": 2,
+        "name": "Presenter 2"
+      },
+      {
+        "id": 3,
+        "name": "Presenter 3"
+      },
+      {
+        "id": 4,
+        "name": "Presenter 4"
+      }
+    ],
+    "casinoTables": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      },
+      {
+        "id": 3
+      }
+    ],
+    "shifts": [
+      {
+        "id": 1,
+        "startTime": "08:00",
+        "endTime": "16:00"
+      },
+      {
+        "id": 2,
+        "startTime": "16:00",
+        "endTime": "00:00"
+      },
+      {
+        "id": 3,
+        "startTime": "00:00",
+        "endTime": "08:00"
+      }
+    ],
+    "shiftAssignments": [
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "08:00",
+        "endTime": "08:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "08:20",
+        "endTime": "08:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "08:40",
+        "endTime": "09:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "09:00",
+        "endTime": "09:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "09:20",
+        "endTime": "09:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "09:40",
+        "endTime": "10:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "10:00",
+        "endTime": "10:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "10:20",
+        "endTime": "10:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "10:40",
+        "endTime": "11:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "11:00",
+        "endTime": "11:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "11:20",
+        "endTime": "11:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "11:40",
+        "endTime": "12:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "12:00",
+        "endTime": "12:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "12:20",
+        "endTime": "12:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "12:40",
+        "endTime": "13:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "13:00",
+        "endTime": "13:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "13:20",
+        "endTime": "13:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "13:40",
+        "endTime": "14:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "14:00",
+        "endTime": "14:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "14:20",
+        "endTime": "14:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "14:40",
+        "endTime": "15:00"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "15:00",
+        "endTime": "15:20"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "15:20",
+        "endTime": "15:40"
+      },
+      {
+        "presenterId": 1,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "15:40",
+        "endTime": "16:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "08:00",
+        "endTime": "08:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "08:20",
+        "endTime": "08:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "08:40",
+        "endTime": "09:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "09:00",
+        "endTime": "09:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "09:20",
+        "endTime": "09:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "09:40",
+        "endTime": "10:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "10:00",
+        "endTime": "10:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "10:20",
+        "endTime": "10:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "10:40",
+        "endTime": "11:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "11:00",
+        "endTime": "11:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "11:20",
+        "endTime": "11:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "11:40",
+        "endTime": "12:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "12:00",
+        "endTime": "12:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "12:20",
+        "endTime": "12:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "12:40",
+        "endTime": "13:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "13:00",
+        "endTime": "13:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "13:20",
+        "endTime": "13:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "13:40",
+        "endTime": "14:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "14:00",
+        "endTime": "14:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "14:20",
+        "endTime": "14:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "14:40",
+        "endTime": "15:00"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "15:00",
+        "endTime": "15:20"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "15:20",
+        "endTime": "15:40"
+      },
+      {
+        "presenterId": 2,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "15:40",
+        "endTime": "16:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "08:00",
+        "endTime": "08:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "08:20",
+        "endTime": "08:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "08:40",
+        "endTime": "09:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "09:00",
+        "endTime": "09:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "09:20",
+        "endTime": "09:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "09:40",
+        "endTime": "10:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "10:00",
+        "endTime": "10:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "10:20",
+        "endTime": "10:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "10:40",
+        "endTime": "11:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "11:00",
+        "endTime": "11:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "11:20",
+        "endTime": "11:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "11:40",
+        "endTime": "12:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "12:00",
+        "endTime": "12:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "12:20",
+        "endTime": "12:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "12:40",
+        "endTime": "13:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "13:00",
+        "endTime": "13:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "13:20",
+        "endTime": "13:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "13:40",
+        "endTime": "14:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "14:00",
+        "endTime": "14:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "14:20",
+        "endTime": "14:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "14:40",
+        "endTime": "15:00"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "15:00",
+        "endTime": "15:20"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "15:20",
+        "endTime": "15:40"
+      },
+      {
+        "presenterId": 3,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "15:40",
+        "endTime": "16:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "08:00",
+        "endTime": "08:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "08:20",
+        "endTime": "08:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "08:40",
+        "endTime": "09:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "09:00",
+        "endTime": "09:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "09:20",
+        "endTime": "09:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "09:40",
+        "endTime": "10:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "10:00",
+        "endTime": "10:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "10:20",
+        "endTime": "10:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "10:40",
+        "endTime": "11:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "11:00",
+        "endTime": "11:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "11:20",
+        "endTime": "11:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "11:40",
+        "endTime": "12:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "12:00",
+        "endTime": "12:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "12:20",
+        "endTime": "12:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "12:40",
+        "endTime": "13:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "13:00",
+        "endTime": "13:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "13:20",
+        "endTime": "13:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "13:40",
+        "endTime": "14:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "14:00",
+        "endTime": "14:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "14:20",
+        "endTime": "14:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 1,
+        "startTime": "14:40",
+        "endTime": "15:00"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 2,
+        "startTime": "15:00",
+        "endTime": "15:20"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "tableId": 3,
+        "startTime": "15:20",
+        "endTime": "15:40"
+      },
+      {
+        "presenterId": 4,
+        "shiftId": 1,
+        "isBreakSlot": true,
+        "startTime": "15:40",
+        "endTime": "16:00"
+      }
+    ]
+  }
