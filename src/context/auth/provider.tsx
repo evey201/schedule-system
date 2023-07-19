@@ -42,7 +42,7 @@ const initialState: StateType = {
     data: null,
 }
 
-type AuthContextType = {
+export type AuthContextType = {
     state: StateType;
     dispatch: Dispatch<ReducerAction>;
     login: ({ email, password }: { email: string; password: string }) => void;
