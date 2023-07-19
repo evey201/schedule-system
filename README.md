@@ -13,7 +13,7 @@ This a mini react schedule system, built with Typescript. Mock-data is used to s
 - Ability to Navigate between screens
 
 # Clone and Build project
--   clonie the project run Yarn install to build the react app
+-   clone the project run Yarn install to build the react app
 -   use yarn run dev to run the project
 
 # Login 
