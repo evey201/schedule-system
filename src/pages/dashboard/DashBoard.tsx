@@ -6,7 +6,7 @@ import { Divider } from "./DashBoard.styled"
 import { useEffect, useState } from "react";
 import { dataArray, TableArray } from "./DataArray";
 import { useAuth } from "../../hooks";
-import { scheduleArrayMorning } from "./ScheduleArray";
+import { scheduleArrayMorning, scheduleArrayAfternoon, scheduleArrayNight } from "./ScheduleArray";
 
 const tabs = [
     {   id: 1, 
@@ -16,13 +16,13 @@ const tabs = [
     { 
         id: 2, 
         title: 'Afternoon Shift', 
-        content: 'Content for Tab 1',
+        content: <ScheduleComponent Data={scheduleArrayAfternoon}  />,
         image: "https://images.unsplash.com/photo-1577257107590-fc448601f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=80"
     },
     {  
         id: 3, 
         title: 'Night shift', 
-        content: 'Content for Tab 2',
+        content: <ScheduleComponent Data={scheduleArrayNight}  />,
         image: 'https://images.unsplash.com/photo-1570751485906-b0bbe415db74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=408&q=80' 
     },
 ];
@@ -42,7 +42,8 @@ interface TableData {
     name: string
 }
 interface UserData {
-    role: string
+    role: string,
+    firstName: string
 }
 
 export const Dashboard = withDashboard(() => {
@@ -52,6 +53,7 @@ export const Dashboard = withDashboard(() => {
     const { state } = useAuth()
     const userData = state.data as UserData;
     const role = userData?.role;
+    const name = userData?.firstName
 
     useEffect(() => {
         setTimeout(() => {
@@ -74,7 +76,7 @@ export const Dashboard = withDashboard(() => {
                 <div className="flex justify-between gap-x-8 mt-8">
                     <div className="w-full">
                         <div className="bg-white p-4 px-4 rounded-md">
-                            <div className="ml-5 mb-4"><h2 className="text-2xl tracking-wider">Hello, Admin</h2></div>
+                            <div className="ml-5 mb-4"><h2 className="text-2xl tracking-wider">Hello, <span className="capitalize">{name}</span></h2></div>
                             <TabbedComponent tabs={tabs}/>
                         </div>
                     </div>
