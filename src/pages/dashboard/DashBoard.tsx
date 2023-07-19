@@ -6,9 +6,10 @@ import { Divider } from "./DashBoard.styled"
 import { useEffect, useState } from "react";
 import { dataArray, TableArray } from "./DataArray";
 import { useAuth } from "../../hooks";
+import GamePresenterList from "./GamePresenter";
 
 const tabs = [
-    { id: 1,  content: <ScheduleComponent /> },
+    { id: 1,  content: <GamePresenterList /> },
     { id: 2, title: 'Tab 1', content: 'Content for Tab 1' },
     { id: 3, title: 'Tab 2', content: 'Content for Tab 2' },
     { id: 4, title: 'Tab 3', content: 'Content for Tab 3' },

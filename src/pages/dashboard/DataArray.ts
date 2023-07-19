@@ -49,3 +49,37 @@ export const TableArray: { id: number, tableNumber: number; tableName: string; n
         name: "Victor Alabi",
     }
 ];
+
+export const scheduleArray: { id: number, shift: string; shiftStartTime: string; shiftEndTime: string; person: {  tableNumber?: number; presenterName: string; presenterId: number; onBreak?: boolean }[]; startTime: string; endTime: string; }[] = [
+    {
+        id: 1,
+        shift: 'morning',
+        shiftStartTime: "08:00",
+        shiftEndTime: "16:00",
+        startTime: "08:00",
+        endTime: "08:20",
+        person: [
+            {
+                presenterId: 1,
+                presenterName: 'Evey',
+                tableNumber: 1
+            },
+            {
+                presenterId: 2,
+                presenterName: 'Julian',
+                tableNumber: 2
+            },
+            {
+                presenterId: 3,
+                presenterName: 'Peter',
+                tableNumber: 3
+            },
+            {
+                presenterId: 4,
+                presenterName: 'Victor',
+                onBreak: true
+            },
+        ]
+
+    }
+]
