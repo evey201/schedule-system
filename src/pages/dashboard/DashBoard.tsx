@@ -1,19 +1,30 @@
 "use client"
 
 import { Link } from "react-router-dom"
-import { TabbedComponent, withDashboard, ScheduleComponent, Loading } from "../../components"
+import { TabbedComponent, withDashboard, Loading, ScheduleComponent } from "../../components"
 import { Divider } from "./DashBoard.styled"
 import { useEffect, useState } from "react";
 import { dataArray, TableArray } from "./DataArray";
 import { useAuth } from "../../hooks";
-import GamePresenterList from "./GamePresenter";
+import { scheduleArrayMorning } from "./ScheduleArray";
 
 const tabs = [
-    { id: 1,  content: <GamePresenterList /> },
-    { id: 2, title: 'Tab 1', content: 'Content for Tab 1' },
-    { id: 3, title: 'Tab 2', content: 'Content for Tab 2' },
-    { id: 4, title: 'Tab 3', content: 'Content for Tab 3' },
-    { id: 5, title: 'Tab 4', content: 'Content for Tab 4' },
+    {   id: 1, 
+        title: 'Morning Shift', 
+        content: <ScheduleComponent Data={scheduleArrayMorning}  />, 
+        image: "https://images.unsplash.com/photo-1512508497406-d4c5505afbca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"},
+    { 
+        id: 2, 
+        title: 'Afternoon Shift', 
+        content: 'Content for Tab 1',
+        image: "https://images.unsplash.com/photo-1577257107590-fc448601f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=874&q=80"
+    },
+    {  
+        id: 3, 
+        title: 'Night shift', 
+        content: 'Content for Tab 2',
+        image: 'https://images.unsplash.com/photo-1570751485906-b0bbe415db74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=408&q=80' 
+    },
 ];
 
 interface PresenterData {
@@ -63,6 +74,7 @@ export const Dashboard = withDashboard(() => {
                 <div className="flex justify-between gap-x-8 mt-8">
                     <div className="w-full">
                         <div className="bg-white p-4 px-4 rounded-md">
+                            <div className="ml-5 mb-4"><h2 className="text-2xl tracking-wider">Hello, Admin</h2></div>
                             <TabbedComponent tabs={tabs}/>
                         </div>
                     </div>

@@ -14,7 +14,6 @@ export interface CasinoTable {
     startTime: string;
     endTime: string;
     name: string,
-    // assignedPresenter: GamePresenter | null;
 }
   
 interface BreakSlot {
