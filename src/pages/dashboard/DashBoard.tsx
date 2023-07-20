@@ -1,7 +1,7 @@
 "use client"
 
 import { Link } from "react-router-dom"
-import { TabbedComponent, withDashboard, Loading, ScheduleComponent } from "../../components"
+import { TabbedComponent, withDashboard, Loading, ScheduleComponent, CollapsibleTable } from "../../components"
 import { Divider } from "./DashBoard.styled"
 import { useEffect, useState } from "react";
 import { dataArray, TableArray } from "./DataArray";
@@ -11,6 +11,7 @@ import { scheduleArrayMorning, scheduleArrayAfternoon, scheduleArrayNight } from
 const tabs = [
     {   id: 1, 
         title: 'Morning Shift', 
+        // content: <CollapsibleTable />,
         content: <ScheduleComponent Data={scheduleArrayMorning}  />, 
         image: "https://images.unsplash.com/photo-1512508497406-d4c5505afbca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"},
     { 
@@ -108,7 +109,7 @@ export const Dashboard = withDashboard(() => {
                                     </tr>
                                     </thead>
 
-                                    <tbody className="">
+                                    <tbody>
                                     {
                                         presenters.map((item) => (
                                             <tr className="" key={item?.id}>

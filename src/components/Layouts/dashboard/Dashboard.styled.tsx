@@ -34,7 +34,7 @@ export const Content = styled.div`
     @media (max-width: 800px) {
         padding: 0;
         border-radius: 0px;
-        padding: 10px 16px;
+        // padding: 10px 16px;
         overflow-y: scroll;
         /* overflow: hidden;  
         */
