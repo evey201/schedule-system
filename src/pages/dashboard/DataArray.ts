@@ -1,31 +1,35 @@
-export const dataArray: { id: number, email: string; firstname: string; lastname: string; status: boolean }[] = [
+export const dataArray: { id: number, email: string; firstname: string; lastname: string; status: string; active: boolean }[] = [
     {
         id: 1,  
         email: "evey@gmail.com",
         firstname: "Evey",
         lastname: "Alabi",
-        status: true
+        status: 'Table 1',
+        active: true
     },
     {
         id: 2,
         email: 'peter@gmail.com',
         firstname: 'Peter',
         lastname: 'Alabi',
-        status: true
+        status: 'Table 2',
+        active: true
     },
     {
         id: 3,
         email: 'victor@gmail.com',
         firstname: 'Victor',
         lastname: 'Alabi',
-        status: true
+        status: 'Table 3',
+        active: true
     },
     {
         id: 4,
         email: 'julian@gmail.com',
         firstname: 'Julian',
         lastname: 'Alabi',
-        status: false
+        status: 'Break',
+        active: false
     },
 ];
 

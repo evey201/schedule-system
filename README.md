@@ -11,6 +11,7 @@ This a mini react schedule system, built with Typescript. Mock-data is used to s
 - A custom Loading component was added
 - Rotation schedule was computed for presenters for a single day(3 shifts)
 - Ability to Navigate between screens
+- For the schedule table on the dashboard, there is no break flag added to the table, however the admin can see who is currently on break through another table panel located to the right of the scheduler
 
 # Clone and Build project
 -   clone the project run Yarn install to build the react app

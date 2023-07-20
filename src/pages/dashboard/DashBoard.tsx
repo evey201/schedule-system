@@ -33,7 +33,8 @@ interface PresenterData {
     email: string
     firstname: string
     lastname: string 
-    status: boolean
+    status: string
+    active: boolean
 }
 
 interface TableData {
@@ -119,18 +120,18 @@ export const Dashboard = withDashboard(() => {
                                                 <td className="whitespace-nowrap px-4 py-2 text-neutral-700">{item?.email}</td>
                                                 <td className="whitespace-nowrap px-4 py-2 text-neutral-700">
                                                 {
-                                                    item.status ? (
+                                                    item.active ? (
                                                         <span
                                                             className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-sm text-purple-700"
                                                         >
-                                                            Live
+                                                            {item.status}
                                                         </span>
 
                                                     ) : (
                                                         <span
-                                                            className="whitespace-nowrap rounded-full bg-red-100 px-2.5 py-0.5 text-sm text-red-700"
+                                                            className="whitespace-nowrap rounded-full bg-red-100 px-3.5 py-0.5 text-sm text-red-700"
                                                         >
-                                                            Break
+                                                            {item.status}
                                                         </span>
                                                     )
                                                 }
